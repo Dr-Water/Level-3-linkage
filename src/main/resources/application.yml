@@ -2,8 +2,16 @@ server:
   port: 8010
   servlet:
     context-path: /link
+   # \u8BBE\u7F6Eurl\u7F16\u7801\u9632\u6B62\u4F7F\u7528@pathvariable\u6CE8\u89E3\u7684\u65F6\u5019\u4E71\u7801\uFF08\u4E0D\u7528\u4E5F\u597D\u50CF\u6CA1\u95EE\u9898\uFF09
+  #tomcat:
+    #uri-encoding: utf-8
 
 spring:
+    #http:
+     # encoding:
+     #   charset: UTF-8
+    #    enabled: true
+     #   force: true
     datasource:
       type: com.alibaba.druid.pool.DruidDataSource
       driverClassName: com.mysql.jdbc.Driver

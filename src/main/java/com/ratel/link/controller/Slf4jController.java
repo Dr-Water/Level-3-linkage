@@ -1,9 +1,7 @@
 package com.ratel.link.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @业务描述：
@@ -16,10 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Slf4j
 @RequestMapping("slf4j")
-public class slf4jController {
-    @GetMapping("test")
-    public void testslf4j(String name){
+public class Slf4jController {
+    @GetMapping("test/{name}")
+    public String  testslf4j(@PathVariable("name") String name){
         log.info(name+"，你好，这里是测试@Slf4j");
+        return name+"，你好，这里是测试@Slf4j";
 
     }
 
